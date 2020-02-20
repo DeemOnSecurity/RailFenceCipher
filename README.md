@@ -27,9 +27,21 @@ more text:
 
 The rows are then taken and read individually like so:
 
+
+> Row 1
+
 HW
+
+> Row 2
+
 E O!
+
+> Row 3
+
 LORD
+
+> Row 4
+
 LL
 
 The text is then combined: HWE O!LORDLL
