@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="html">
+
+<head>
+    <title>Rail Fence Cipher</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+
+<body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
+<div id="page-container">
+    <div id="content-wrap">
+        <div class="container container-table">
+            <div class="row vertical-center-row">
+                <div class="text-center col-md-4 col-md-offset-4">
+                    <form action="http://localhost:5000/" method="POST">
+                        <h3>Text</h3>
+                        <textarea id="text" name="text" required autofocus placeholder="{{ result }}"
+                                  style="height:200px; color: #44475a; width:80%"></textarea>
+
+                        <h3>Key</h3>
+                        <input type="number" name="key" style="color: #44475a; width: 90%"/>
+
+                        <h3>Direction</h3>
+                        <select id="direction" name="direction" style="color: #44475a; width: 90%">
+                            <option value="encode">Encode</option>
+                            <option value="decode">Decode</option>
+                        </select>
+
+                        <br>
+                        <br>
+                        <input class="btn btn-success" type="submit" value="cipher"
+                               style="width: 90%; font-size: 140%; font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace "/>
+
+
+                    </form>
+                    <br>
+                    <br>
+                    <div class="container-fluid"
+                         style="color: #8be9fd; font-size: 150%; width:90%; font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace  ">{{ result }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"><a href="https://github.com/DeemOnSecurity">DeemOnSecurity</a></footer>
+</div>
+</body>
+
+</html>
